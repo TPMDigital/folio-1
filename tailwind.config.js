@@ -1,11 +1,9 @@
 module.exports = {
-  purge: false,
+  purge: [
+    './src/**/*.html',
+    './src/**/*.vue',
+  ],
   theme: {
-    purge: [
-      './src/**/*.html',
-      './src/**/*.vue',
-      './src/**/*.jsx',
-    ],
     extend: {
       fontSize: {
        '7xl': '5rem',

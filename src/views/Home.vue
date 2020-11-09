@@ -2,11 +2,11 @@
   <div
     class="hero-image h-screen font-sans w-full m-0 bg-no-repeat bg-center bg-cover relative overflow-y-auto"
   >
-    <header class="border-b-2 border-gray-600 px-2 xl:px-0">
+    <header class="border-b-2 border-gray-600">
       <!-- REGULAR NAV -->
       <div class="container mx-auto">
         <nav
-          class="nav-top-anim animate__animated flex items-center justify-between py-2"
+          class="nav-top-anim animate__animated animate__fadeInDown flex items-center justify-between px-2 py-2"
         >
           <div>
             <a
@@ -97,9 +97,9 @@
       </nav>
     </header>
 
-    <section class="container mx-auto relative">
+    <section class="container mx-auto relative px-2 xl:px-0">
       <!-- HERO TEXT -->
-      <div class="mt-2 hero-anim animate__animated px-2 xl:px-0">
+      <div class="mt-2 hero-anim animate__animated animate__fadeInLeft">
         <div
           class="text-5xl lg:text-7xl text-white tracking-wide font-bold pt-0 xl:pt-20 pointer-events-none"
         >
@@ -128,11 +128,11 @@
         class="icons block sm:flex justify-between pt-16 pointer-events-none mt-4"
       >
         <div
-          class="card flex w-full sm:w-1/3 pr-6 mobile-anim animate__animated"
+          class="card flex w-full sm:w-1/3 pr-6 mobile-anim animate__animated animate__fadeInUp"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-32 h-32 text-white"
+            class="px-1 w-32 h-32 text-white"
             viewBox="0 0 32 32"
           >
             <path
@@ -150,11 +150,11 @@
         </div>
 
         <div
-          class="card flex w-full sm:w-1/3 pr-6 globe-anim animate__animated"
+          class="card flex w-full sm:w-1/3 pr-6 globe-anim animate__animated animate__fadeInUp"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-32 h-32 text-white"
+            class="px-1 w-32 h-32 text-white"
             viewBox="0 0 32 32"
           >
             <path
@@ -171,10 +171,12 @@
           </div>
         </div>
 
-        <div class="card flex w-full sm:w-1/3 pr-6 home-anim animate__animated">
+        <div
+          class="card flex w-full sm:w-1/3 pr-6 home-anim animate__animated animate__fadeInUp"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-32 h-32 text-white"
+            class="px-1 w-32 h-32 text-white"
             viewBox="0 0 32 32"
           >
             <path
@@ -193,42 +195,30 @@
       </div>
       <!-- -->
     </section>
-
-    <footer
-      class="absolute bottom-0 w-full text-center text-gray-500 text-sm"
-    >
-      <span class="animate__animated attrib pt-1 leading-9 inline-block"
-        >Photo by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://unsplash.com/@henriquesetim?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
-          >henrique setim</a
-        >
-        on
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
-          >Unsplash</a
-        ></span
-      >
-    </footer>
   </div>
+  <footer class="absolute bottom-0 w-full text-center text-gray-600 text-sm">
+    <span class="animate__animated attrib pt-1 leading-9 inline-block"
+      >Photo by
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://unsplash.com/@henriquesetim?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >henrique setim</a
+      >
+      on
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >Unsplash</a
+      ></span
+    >
+  </footer>
+
   <!-- REST OF WEBSITE HERE !! -->
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      showMenu: false,
-    };
-  },
-};
-</script>
-
-<style>
+<style scoped>
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.45)),
     url("../assets/mountains.jpg");
@@ -261,33 +251,42 @@ export default {
 }
 
 .nav-top-anim {
-  animation: fadeInDown;
+  /* animation: fadeInDown; */
   --animate-delay: 2s;
   --animate-duration: 1s;
 }
 
 .hero-anim {
-  animation: fadeInLeft;
+  /* animation: fadeInLeft; */
   --animate-delay: 2s;
   --animate-duration: 1s;
 }
 
 .mobile-anim {
-  animation: fadeInUp;
+  /* animation: fadeInUp; */
   --animate-delay: 2s;
   --animate-duration: 1s;
 }
 
 .globe-anim {
-  animation: fadeInUp;
+  /* animation: fadeInUp; */
   --animate-delay: 2s;
   --animate-duration: 1.5s;
 }
 
 .home-anim {
-  animation: fadeInUp;
+  /* animation: fadeInUp; */
   --animate-delay: 2s;
   --animate-duration: 2s;
 }
-
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      showMenu: false,
+    };
+  },
+};
+</script>
